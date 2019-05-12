@@ -3,7 +3,7 @@
   "description": "Disallows use of destructuring in some circumstances",
   "homepage": "https://github.com/JShabtai/TslintNoDestructuring",
   "keywords": ["destructuring", "tslint"],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "jshabtai",
   "main": "index.js",
   "license": "MIT",
@@ -16,7 +16,7 @@
   "scripts": {
     "compile": "tsc",
     "build": "yarn compile && cp README.md LICENSE package.json build",
-    "publish": "cd build && npm publish",
+    "publish": "yarn build && yarn test && cd build && npm publish",
     "test": "tslint -r build --test test/"
   }
 }
