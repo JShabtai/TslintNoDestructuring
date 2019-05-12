@@ -1,0 +1,27 @@
+function foo1({a ,b}) {
+              ~~~~~~ [No destructuring in function signatures]
+    return a;
+}
+
+function foo2([a ,b]) {
+              ~~~~~~ [No destructuring in function signatures]
+    return a;
+}
+
+function foo3(c ,d: number) {
+    return c;
+}
+
+const bar1 = ({e ,f}) => {
+              ~~~~~~ [No destructuring in function signatures]
+    return e;
+}
+
+const bar2 = ([g ,h]) => {
+              ~~~~~~ [No destructuring in function signatures]
+    return g;
+}
+
+const bar3 = (i ,j) => {
+    return i;
+}

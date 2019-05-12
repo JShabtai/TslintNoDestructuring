@@ -1,0 +1,22 @@
+{
+  "name": "tslint-no-destructuring",
+  "description": "Disallows use of destructuring in some circumstances",
+  "homepage": "https://github.com/JShabtai/TslintNoDestructuring",
+  "keywords": ["destructuring", "tslint"],
+  "version": "0.1.0",
+  "author": "jshabtai",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "tslint": "^5.16.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.4.5"
+  },
+  "scripts": {
+    "compile": "tsc",
+    "build": "yarn compile && cp README.md LICENSE package.json build",
+    "publish": "cd build && npm publish",
+    "test": "tslint -r build --test test/"
+  }
+}
